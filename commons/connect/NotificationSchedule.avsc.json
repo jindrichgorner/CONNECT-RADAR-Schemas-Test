@@ -18,21 +18,27 @@
             "OTHER"
         ]
     }, "doc": "The reason when user makes the schedule change." },
-    { "name": "updatedSchedules", "type": {
-      "name":"",
-      "type": {
-          "type": "enum",
-          "name": "weekdays",
-          "symbols": [
-              "MONDAY",
-              "TUESDAY",
-              "WEDNESDAY",
-              "THURSDAY",
-              "FRIDAY",
-              "SATURDAY",
-              "SUNDAY"
-          ]
+    { "name": "activeDays", "type": {
+      "type":{
+          "type": "array",
+          "items": {
+              "name": "ActiveDay",
+              "type":{
+                  "type": "enum",
+                  "name": "weekdays",
+                  "symbols": [
+                      "MONDAY",
+                      "TUESDAY",
+                      "WEDNESDAY",
+                      "THURSDAY",
+                      "FRIDAY",
+                      "SATURDAY",
+                      "SUNDAY"
+                  ]
+              }
+          }
       }
-    }, "doc": "Updated schedule the user makes."}
+     
+    }, "doc": "Updated schedule active days the user makes."}
   ]
 }
