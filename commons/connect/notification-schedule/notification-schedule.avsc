@@ -1,0 +1,38 @@
+{
+  "namespace": "org.radarcns.connect.notificationSchedule",
+  "type": "record",
+  "name": "NotificationSchedule",
+  "doc": "Notification Schedule changes and reason that a user executes",
+  "fields": [
+    { "name": "time", "type": "double", "doc": "Timestamp in UTC (s) when the schedule is changed." },
+    { "name": "changeReason", "type": {
+        "type": "enum",
+        "name": "changeReason",
+        "symbols": [
+            "ALERT_ARE_ANNOYING",
+            "TOO_BUSY",
+            "FEELING_UNWELL",
+            "FEELING_WELL",
+            "JUST_BECAUSE",
+            "PREFER_NOT_TO_SAY",
+            "OTHER"
+        ]
+    }, "doc": "The reason when user makes the schedule change." },
+    { "name": "updatedSchedules", "type": {
+      "name":"",
+      "type": {
+          "type": "enum",
+          "name": "weekdays",
+          "symbols": [
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+              "SUNDAY"
+          ]
+      }
+    }, "doc": "Updated schedule the user makes."}
+  ]
+}
