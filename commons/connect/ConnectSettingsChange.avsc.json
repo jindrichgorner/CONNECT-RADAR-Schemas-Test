@@ -14,7 +14,7 @@
           "doc": "UNKNOWN: for any other input type."
     }},
 
-    { "name": "value", "type": "boolean", "doc": "True/False depending on whether the setting has been enabled or disabled"},
+    { "name": "value", "type": "boolean", "doc": "True/False depending on whether the setting has been enabled or disabled"}
     
     ]
 }
