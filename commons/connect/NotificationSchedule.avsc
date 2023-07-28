@@ -1,5 +1,5 @@
 {
-  "namespace": "org.radarcns.connect.notificationSchedule",
+  "namespace": "org.radarcns.connect",
   "type": "record",
   "name": "NotificationSchedule",
   "doc": "Notification Schedule changes and reason that a user executes",
