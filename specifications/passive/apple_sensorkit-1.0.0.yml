@@ -15,6 +15,16 @@ data:
     value_schema: .passive.apple.sensorkit.SensorKitAmbientLight
     sample_rate:
       dynamic: true
+  - type: AMBIENT_PRESSURE
+    topic: sensorkit_ambient_pressure
+    value_schema: .passive.apple.sensorkit.SensorKitAmbientPressure
+    sample_rate:
+      dynamic: true
+  - type: KEYBOARD_METRICS
+    topic: sensorkit_keyboard_metrics
+    value_schema: .passive.apple.sensorkit.SensorKitKeyboardMetrics
+    sample_rate:
+      dynamic: true
   - type: MESSAGE_USAGE
     topic: sensorkit_message_usage
     value_schema: .passive.apple.sensorkit.SensorKitMessageUsage
