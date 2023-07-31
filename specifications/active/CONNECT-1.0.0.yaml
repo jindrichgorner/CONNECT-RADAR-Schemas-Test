@@ -1,0 +1,15 @@
+name: CONNECT-APP
+vendor: University of Manchester
+model: connect-schemas
+version: 1.0.0
+assessment_type: APP
+doc: Spec for the CONNECT app
+data:
+  - type: SETTING_CHANGE_LOG
+    doc: Settings changes log
+    topic: connect_settings_change
+    value_schema: .active.connect.ConnectSettingsChange
+  - type: NOTIFICATION_SCHEDULE_CHANGE_LOG
+    doc: Notification schedule changes log
+    topic: notification_schedule_change
+    value_schema: .active.connect.NotificationSchedule
