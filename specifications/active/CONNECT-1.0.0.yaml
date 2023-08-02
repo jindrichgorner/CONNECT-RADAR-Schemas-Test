@@ -13,3 +13,7 @@ data:
     doc: Notification schedule changes log
     topic: notification_schedule_change
     value_schema: .active.connect.NotificationSchedule
+  - type: CONNECT_DATA_LOG
+    doc: Connect data logs
+    topic: connect_data_log
+    value_schema: .active.connect.ConnectDataLog
