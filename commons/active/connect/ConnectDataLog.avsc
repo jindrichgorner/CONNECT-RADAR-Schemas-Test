@@ -1,0 +1,23 @@
+{
+  "namespace": "org.radarcns.active.connect",
+  "type": "record",
+  "name": "ConnectDataLog",
+  "doc": "Logging for any kafka data sending in CONNECT",
+  "fields": [
+    { "name": "time", "type": "double", "doc": "Timestamp in UTC (s) when the data send is triggered." },
+    { "name": "dataGroupingType", "type": {
+        "type": "enum",
+        "name": "dataGroupingType",
+        "symbols": [
+            "PASSIVE_ANDROID_PHONE",
+            "PASSIVE_GOOGLE_CONNECT",
+            "PASSIVE_IOS_PHONE",
+            "PASSIVE_HEALTH_KIT",
+            "PASSIVE_SENSOR_KIT",
+            "PASSIVE_FITBIT",
+            "ACTIVE_QUESTIONNAIRE",
+            "OTHER"
+        ]
+    }, "doc": "Grouping of data" }
+  ]
+}
