@@ -1,0 +1,17 @@
+#====================================== Android Phone Sensors =====================================#
+vendor: Apple
+model: iOS
+version: 1.0.0
+data:
+  - type: MAGNETIC_FIELD
+    unit: MICRO_TESLA
+    processing_state: RAW
+    topic: apple_ios_magnetic_field
+    value_schema: .passive.apple.ios.IosMagneticField
+    sample_rate:
+      frequency: 5
+      configurable: true
+    fields:
+      - name: x
+      - name: y
+      - name: z
