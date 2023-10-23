@@ -17,3 +17,27 @@ data:
     doc: Connect data logs
     topic: connect_data_log
     value_schema: .active.connect.ConnectDataLog
+  - type: BATTERY
+    doc: iOS battery level
+    topic: ios_phone_battery_level
+    value_schema: .passive.phone.PhoneBatteryLevel
+  - type: RELATIVE_LOCATION
+    doc: iOS relative location
+    topic:  ios_phone_relative_location
+    value_schema: .passive.phone.PhoneRelativeLocation
+  - type: HealthKitTypedData
+    doc: A quantity sample type that measures the user's resting heart rate, unit is count/min.
+    topic: active_apple_healthkit_resting_heart_rate
+    value_schema: .active.healthkit.HealthKitTypedData
+  - type: HealthKitTypedData
+    doc: A quantity sample type that measures the user's heart rate variability, unit is ms.
+    topic: active_apple_healthkit_heart_rate_variability
+    value_schema: .active.healthkit.HealthKitTypedData
+  - type: HealthKitTypedData
+    doc: A quantity sample type that measures the headphone audio exposure, unit is dBASPL.
+    topic: active_apple_healthkit_audio_exposure
+    value_schema: .active.healthkit.HealthKitTypedData
+  - type: HealthKitTypedData
+    doc: A quantity sample type that measures the environment audio exposure, unit is dBASPL.
+    topic: active_apple_healthkit_env_exposure
+    value_schema: .active.healthkit.HealthKitTypedData
