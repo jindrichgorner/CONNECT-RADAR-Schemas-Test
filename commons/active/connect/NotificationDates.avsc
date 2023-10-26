@@ -1,0 +1,17 @@
+{
+  "namespace": "org.radarcns.active.connect",
+  "type": "record",
+  "name": "NotificationDates",
+  "doc": "Notification schedule dates",
+  "fields": [
+    { "name": "time", "type": "double", "doc": "Timestamp in UTC (s) when the notifications are scheduled." },
+    { "name": "scheduledDates", "type": {
+        "type": "array",
+          "items": {
+                "name": "scheduledDate",
+                "type": "double",
+                "doc": "scheduled date"
+            }
+    }, "doc": "Schedule dates."}
+  ]
+}
