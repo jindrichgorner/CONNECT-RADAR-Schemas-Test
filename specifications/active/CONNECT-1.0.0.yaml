@@ -41,3 +41,7 @@ data:
     doc: A quantity sample type that measures the environment audio exposure, unit is dBASPL.
     topic: active_apple_healthkit_env_exposure
     value_schema: .active.healthkit.HealthKitTypedData
+  - type: NOTIFICATION_SCHEDULE_DATES_LOG
+    doc: Notification schedule dates log
+    topic: notification_schedule_dates
+    value_schema: .active.connect.NotificationDates

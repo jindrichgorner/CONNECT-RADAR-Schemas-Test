@@ -23,7 +23,6 @@
           "items": {
               "name": "ActiveDay",
                 "type": "enum",
-                "name": "weekdays",
                 "symbols": [
                     "MONDAY",
                     "TUESDAY",
