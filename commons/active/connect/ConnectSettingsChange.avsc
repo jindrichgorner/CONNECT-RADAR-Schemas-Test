@@ -19,14 +19,18 @@
     { "name": "reason",
       "type": {
           "name": "reason",
-          "type": "enum",
-          "symbols": ["ALERT_ARE_ANNOYING",
-            "TOO_BUSY",
-            "FEELING_UNWELL",
-            "FEELING_WELL",
-            "JUST_BECAUSE",
-            "PREFER_NOT_TO_SAY",
-            "OTHER"],
+          "type": ["null", {"type":"enum",
+                            "name":"reason",
+                            "symbols": ["ALERT_ARE_ANNOYING",
+                                  "TOO_BUSY",
+                                  "FEELING_UNWELL",
+                                  "FEELING_WELL",
+                                  "JUST_BECAUSE",
+                                  "PREFER_NOT_TO_SAY",
+                                  "OTHER"],
+                            "doc":"Pause/unpause reason"
+          }],
+           "default": null,
           "doc": "Optional, only for notification enabled/disabled use"
     }}
 
