@@ -19,7 +19,7 @@
 
     { "name": "reason", "type": ["null",
       {
-        "name": "reason",
+        "name": "reasonEnum",
         "type": "enum",
         "doc": "Pause/unpause reason",
         "symbols": [
