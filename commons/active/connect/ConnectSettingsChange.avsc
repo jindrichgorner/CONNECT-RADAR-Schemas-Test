@@ -12,27 +12,28 @@
           "type": "enum",
           "symbols": ["PASSIVE_DATA_ENABLED", "NOTIFICATIONS_ENABLED", "DARK_MODE_ENABLED", "UNKNOWN"],
           "doc": "UNKNOWN: for any other input type."
-    }},
+      }
+    },
 
     { "name": "value", "type": "boolean", "doc": "True/False depending on whether the setting has been enabled or disabled"},
-    
-    { "name": "reason",
-      "type": {
-          "name": "reason",
-          "type": ["null", {"type":"enum",
-                            "name":"reason",
-                            "symbols": ["ALERT_ARE_ANNOYING",
-                                  "TOO_BUSY",
-                                  "FEELING_UNWELL",
-                                  "FEELING_WELL",
-                                  "JUST_BECAUSE",
-                                  "PREFER_NOT_TO_SAY",
-                                  "OTHER"],
-                            "doc":"Pause/unpause reason"
-          }],
-           "default": null,
-          "doc": "Optional, only for notification enabled/disabled use"
-    }}
 
-    ]
+    { "name": "reason", "type": 
+      {
+        "name": "reasonEnum",
+        "type": "enum",
+        "doc": "Pause/unpause reason",
+        "symbols": [
+          "ALERT_ARE_ANNOYING",
+          "TOO_BUSY",
+          "FEELING_UNWELL",
+          "FEELING_WELL",
+          "JUST_BECAUSE",
+          "PREFER_NOT_TO_SAY",
+          "OTHER",
+          "NULL"
+        ],
+        "default":"NULL"
+      }
+    , "doc": "Optional, only for notification enabled/disabled use, other changes will be rercorded as NULL"}
+  ]
 }
