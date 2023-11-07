@@ -21,7 +21,7 @@
     { "name": "speechExpressionConfidence", "type": "double", "doc": "The level of confidence of the speaker." },
     { "name": "speechExpressionDominance", "type": "double", "doc": "The degree of how strong or meek the speaker sounds." },
     { "name": "speechExpressionMood", "type": "double", "doc": "An indication of how slurry, tired, or exhausted the speaker sounds compared to normal speech." },
-    { "name": "speechExpressionValence", "type": "double", "doc": "The degree of positive or negative emotion or sentiment of the speaker." },
+    { "name": "speechExpressionValence", "type": "double", "doc": "The degree of positive or negative emotion or sentiment of the speaker." }
 
   ]
 }
