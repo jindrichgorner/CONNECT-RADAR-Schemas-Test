@@ -7,25 +7,21 @@
     { "name": "time", "type": "double", "doc": "Device timestamp in UTC (s)." },
     { "name": "timeReceived", "type": "double", "doc": "Device receiver timestamp in UTC (s)." },
 
+    { "name": "audioLevelStart", "type": "double", "doc": "The start time of the time range in the audio stream that the level applies to, in seconds relative to time (s)." },
     { "name": "audioLevelDuration", "type": "double", "doc": "The duration of the time range in the audio stream that the level applies to (s)." },
-    { "name": "audioLevelStart", "type": "double", "doc": "The start time of the time range in the audio stream that the level applies to (?)." },
     { "name": "audioLevelLoudness", "type": "double", "doc": "The measure of the audio level in decibels." },
 
-//    { "name": "sessionFlags", "type": "double", "doc": "The duration that the report spans (s)." },
-
-    { "name": "soundClassificationConfidence", "type": "double", "doc": "The confidence value the model has in its prediction." }, // ARRAY
-    { "name": "soundClassificationStart", "type": "double", "doc": "The start time of the time span that corresponds to the result’s classifications (?)." },
+    { "name": "soundClassificationStart", "type": "double", "doc": "The start time of the time span that corresponds to the result’s classifications, in seconds relative to time (s)." },
     { "name": "soundClassificationDuration", "type": "double", "doc": "The duration of the time span that corresponds to the result’s classifications (s)." },
-//    { "name": "sdDetected", "type": "double", "doc": "The duration that the report spans (s)." },
-//    { "name": "sdIdentifier", "type": "double", "doc": "The duration that the report spans (s)." },
+    { "name": "soundClassification", "type": "string", "doc": "The confidence value the model has in its prediction." },
 
-    { "name": "speechExpressionArousal", "type": "double", "doc": "The level of energy or activation of the speaker." },
+    { "name": "speechExpressionStart", "type": "double", "doc": "The start time of the time range in the audio stream that the metrics and analytics apply to, in seconds relative to time (s)." },
+    { "name": "speechExpressionDuration", "type": "double", "doc": "The duration of the time range in the audio stream that the metrics and analytics apply to (s)." },
+    { "name": "speechExpressionActivation", "type": "double", "doc": "The level of energy or activation of the speaker." },
     { "name": "speechExpressionConfidence", "type": "double", "doc": "The level of confidence of the speaker." },
     { "name": "speechExpressionDominance", "type": "double", "doc": "The degree of how strong or meek the speaker sounds." },
     { "name": "speechExpressionMood", "type": "double", "doc": "An indication of how slurry, tired, or exhausted the speaker sounds compared to normal speech." },
-    { "name": "speechExpressionValency", "type": "double", "doc": "The degree of positive or negative emotion or sentiment of the speaker." },
-    { "name": "speechExpressionDuration", "type": "double", "doc": "The duration of the time range in the audio stream that the metrics and analytics apply to (s)." },
-    { "name": "speechExpressionStart", "type": "double", "doc": "The start time of the time range in the audio stream that the metrics and analytics apply to (?)." },
+    { "name": "speechExpressionValence", "type": "double", "doc": "The degree of positive or negative emotion or sentiment of the speaker." },
 
   ]
 }
