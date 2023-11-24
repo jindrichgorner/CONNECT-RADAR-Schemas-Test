@@ -55,3 +55,8 @@ data:
     value_schema: .passive.apple.sensorkit.SensorKitDeviceUsage
     sample_rate:
       dynamic: true
+  - type: TELEPHONY_SPEECH_METRICS
+    topic: sensorkit_telephony_speech_metrics
+    value_schema: .passive.apple.sensorkit.SensorKitTelephonySpeechMetrics
+    sample_rate:
+      dynamic: true
