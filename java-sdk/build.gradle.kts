@@ -6,6 +6,7 @@ plugins {
     id("com.github.ben-manes.versions")
     kotlin("jvm") apply false
     id("org.jetbrains.dokka") apply false
+     `maven-publish`
 }
 
 allprojects {
@@ -107,23 +108,6 @@ tasks.withType<DependencyUpdatesTask> {
         !stableVersionPattern.containsMatchIn(candidate.version)
     }
 }
-
-publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/UoM-Digital-Health-Software/CONNECT-RADAR-Schemas-Test")
-            credentials {
-                username = project.findProperty("gpr.user") as String? ?: "UoMPackage"
-                password = project.findProperty("gpr.key") as String? ?: "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"
-            }
-        }
-    }
-}
-
-
-
-
 
 
 tasks.wrapper {
@@ -308,4 +292,20 @@ fun Project.enablePublishing() {
     tasks.withType<Sign> {
         onlyIf { gradle.taskGraph.hasTask(myProject.tasks["publish"]) }
     }
+}
+
+
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/UoM-Digital-Health-Software/CONNECT-RADAR-Schemas-Test")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: "UoMPackage"
+                password = project.findProperty("gpr.key") as String? ?: "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"
+            }
+        }
+    }
+
 }
