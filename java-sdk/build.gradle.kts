@@ -10,7 +10,7 @@ plugins {
 
 allprojects {
     version = "0.8.5-SNAPSHOT"
-    group = "org.radarbase"
+    group = "uk.ac.herc.dhs"
 }
 
 // Configuration
@@ -108,22 +108,23 @@ tasks.withType<DependencyUpdatesTask> {
     }
 }
 
-nexusPublishing {
-    fun Project.propertyOrEnv(propertyName: String, envName: String): String? {
-        return if (hasProperty(propertyName)) {
-            property(propertyName)?.toString()
-        } else {
-            System.getenv(envName)
-        }
-    }
-
+publishing {
     repositories {
-        sonatype {
-            username.set(propertyOrEnv("ossrh.user", "OSSRH_USER"))
-            password.set(propertyOrEnv("ossrh.password", "OSSRH_PASSWORD"))
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/UoM-Digital-Health-Software/CONNECT-RADAR-Schemas-Test [maven.pkg.github.com]")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: "UoMPackage"
+                password = project.findProperty("gpr.key") as String? ?: "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"
+            }
         }
     }
 }
+
+
+
+
+
 
 tasks.wrapper {
     gradleVersion = "7.6"
